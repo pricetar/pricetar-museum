@@ -120,7 +120,18 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 375px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .load-image-animation {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transform-origin: center bottom;
+        animation: yurayura 1s linear infinite;
+    }
+}
+
+@media screen and (max-width: 375px) {
     /* 480px以下に適用されるCSS（スマホ用） */
     .load-image-animation {
         position: absolute;

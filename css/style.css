@@ -1,97 +1,3 @@
-html,
-body {
-    padding: 0;
-    margin: 0;
-    user-select: none;
-}
-
-.zentai {
-    width: 100%;
-    position: relative;
-}
-
-.background {
-    width: 100%;
-}
-
-.cloud-top-right {
-    position: absolute;
-}
-
-.museum {
-    padding: 0;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
-.button {
-    width: 30%;
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.pricetar {
-    position: absolute;
-    bottom: 10%;
-    left: 70%;
-    width: 10%;
-}
-
-.fukidashi {
-    position: absolute;
-    bottom: 10%;
-    left: 20%;
-    width: 10%;
-}
-
-#button {
-    box-shadow: 0px 7px 0px 0px black;
-    border-radius: 20px;
-}
-
-#button:hover {
-    box-shadow: none;
-    margin-bottom: -7px;
-    filter: brightness(1.1);
-    -webkit-transition: 0.1s ease-in-out;
-    -moz-transition: 0.1s ease-in-out;
-    -o-transition: 0.1s ease-in-out;
-    transition: 0.1s ease-in-out;
-}
-
-.transition-animation {
-    transform: scale(3.0);
-}
-
-@keyframes fadeInAnime {
-    0% {
-        transform: scale(1.0);
-    }
-    100% {
-        transform: scale(1.5);
-    }
-}
-
-
-/* プライスターくんがジャンプしている挙動 */
-
-.text__bound {
-    animation: key .3s ease infinite alternate;
-}
-
-@keyframes key {
-    0% {
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(-15px);
-    }
-}
-
-
 /* 鳥のアニメーション */
 
 .bird {
@@ -141,12 +47,11 @@ body {
     transform-origin: right bottom;
 }
 
-
-/* .bird:before {
+.bird:before {
     width: 100%;
     height: 1px;
     animation: leftWing 8s linear infinite;
-} */
+}
 
 .bird:after {
     width: 1px;
@@ -305,8 +210,26 @@ body {
 }
 
 
+/* プライスターくんがジャンプしている挙動 */
+
+.text__bound {
+    animation: key .3s ease infinite alternate;
+}
+
+@keyframes key {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+
 /* 吹き出し */
 
+
+/* 
 .balloon4 {
     position: absolute;
     bottom: 18%;
@@ -349,4 +272,134 @@ body {
 .balloon4 p {
     margin: 0;
     padding: 0;
+} */
+
+@media screen and (min-width: 960px) {
+    /* 960px以上に適用されるCSS（PC用） */
+    html,
+    body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        user-select: none;
+    }
+    .zentai {
+        width: 100%;
+        position: relative;
+    }
+    .background {
+        width: 100%;
+    }
+    .cloud-top-right {
+        position: absolute;
+    }
+    .museum {
+        padding: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .button {
+        width: 30%;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .pricetar {
+        position: absolute;
+        bottom: 10%;
+        left: 70%;
+        width: 10%;
+    }
+    .fukidashi {
+        position: absolute;
+        bottom: 10%;
+        left: 20%;
+        width: 10%;
+    }
+    #button {
+        box-shadow: 0px 7px 0px 0px #563922;
+        border-radius: 20px;
+    }
+    #button:hover {
+        box-shadow: none;
+        margin-bottom: -7px;
+        filter: brightness(1.1);
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        transition: 0.1s ease-in-out;
+    }
+    .transition-animation {
+        transform: scale(3.0);
+    }
+    @keyframes fadeInAnime {
+        0% {
+            transform: scale(1.0);
+        }
+        100% {
+            transform: scale(1.5);
+        }
+    }
+}
+
+
+/* レスポンシブ対応 */
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+}
+
+@media screen and (max-width: 959px) {
+    /* 480px以下に適用されるCSS（スマホとタブレット） */
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        user-select: none;
+    }
+    .zentai {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .museum {
+        width: 100%;
+        position: absolute;
+        bottom: 10%;
+    }
+    .button {
+        width: 60%;
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .background {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .pricetar {
+        position: absolute;
+        bottom: 10%;
+        left: 70%;
+        width: 20%;
+    }
+    #button {
+        box-shadow: 0px 7px 0px 0px #563922;
+        border-radius: 20px;
+    }
+    #button:active {
+        box-shadow: none;
+        margin-bottom: -7px;
+        filter: brightness(1.1);
+        -webkit-transition: 0.1s ease-in-out;
+        -moz-transition: 0.1s ease-in-out;
+        -o-transition: 0.1s ease-in-out;
+        transition: 0.1s ease-in-out;
+    }
 }
