@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: #ffc107;
+}
+
+@media screen and (min-width: 960px) {
+    /* 960px以上に適用されるCSS（PC用） */
+    .load-image {
+        text-align: center;
+        padding: 8px 0;
+        width: 100%;
+    }
+    .load-image-animation {
+        transform-origin: center bottom;
+        animation: yurayura 1s linear infinite;
+    }
+    @keyframes yurayura {
+        0%,
+        100% {
+            transform: rotate(5deg);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+    }
+    /* ロードの丸 */
+    .block {
+        width: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .circle {
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        animation: loading 1s infinite;
+    }
+    .circle:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    .circle:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+    @keyframes loading {
+        0% {
+            transform: scale(0.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+
+/* ロードの丸 */
+
+
+/* レスポンシブ対応 */
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+    .load-image {
+        width: 80%;
+    }
+    .load-image-animation {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        transform-origin: center bottom;
+        animation: yurayura 1s linear infinite;
+    }
+    @keyframes yurayura {
+        0%,
+        100% {
+            transform: rotate(5deg);
+        }
+        50% {
+            transform: rotate(-5deg);
+        }
+    }
+    /* ロードの丸 */
+    .block {
+        width: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .circle {
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        animation: loading 1s infinite;
+    }
+    .circle:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    .circle:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+    @keyframes loading {
+        0% {
+            transform: scale(0.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    .load-image-animation {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transform-origin: center bottom;
+        animation: yurayura 1s linear infinite;
+    }
+}

@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: tan;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 50px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.header-image {
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.header-image:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* 1:1 */
+}
+
+.back-button {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+    z-index: 2;
+}
+
+.back-button-image {
+    transform: rotate(90deg);
+    width: 20%;
+}
+
+#back-btn:hover {
+    animation: rotate-anime 0.3s ease-in-out;
+}
+
+@keyframes rotate-anime {
+    0% {
+        transform: rotate(90);
+    }
+    100% {
+        transform: rotate(450deg);
+    }
+}
+
+
+/* グリッドレイアウトについて */
+
+.item {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 20px;
+    border: 3px solid #ccc;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-template-rows: 180px 100px 80px 120px auto auto;
+    /* grid-template-columns × grid-template-rowsで配置できる要素数をカウントできる */
+}
+
+.box-big1 {
+    grid-row: 1 / 4;
+    width: 300px;
+}
+
+.box-big3 {
+    grid-row: 3 / 5;
+}
+
+
+/* グリッドのレスポンシブ対応  */
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .box-big1,
+    .box-big2,
+    .box-big3,
+    .box-big4 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+
+/* グリッドレイアウトのHTML */
+
+
+/* <div class="container">
+<div class="item box-big1" style="position: relative;">
+
+</div>
+<div class="item">B</div>
+<div class="item">C</div>
+<div class="item">D</div>
+<div class="item">E</div>
+<div class="item box-big2">F</div>
+<div class="item box-big3">G</div>
+<div class="item">H</div>
+<div class="item">I</div>
+<div class="item">J</div>
+<div class="item box-big4">K</div>
+</div> */
+
+
+/* グリッドリスト */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-feature-settings: "palt";
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    padding-left: 20px;
+    background-color: black;
+}
+
+header h2 {
+    font-weight: normal;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+section {
+    margin: 20px 20px 0 20px;
+}
+
+section:last-of-type {
+    margin-bottom: 20px
+}
+
+section h1 {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+figure {
+    border-radius: 20px;
+    background-color: tan;
+    line-height: 0;
+}
+
+figure img:hover {
+    opacity: .7;
+}
+
+@media screen and (max-width:767px) {
+    figure img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*幅768px以上に適用されるCSS（タブレットサイズ以上・幅990px以上にも適用される）*/
+
+@media screen and (min-width:768px) {
+    article {
+        height: 2600px;
+        /* ここの高さを変更することでカラム数を変更することが出来る */
+    }
+    section {
+        width: 28%;
+    }
+}
+
+
+/*幅990px以上に適用されるCSS（PCサイズ以上・幅768px以上のCSSが干渉する）*/
+
+@media screen and (min-width:990px) {
+    figure img {
+        border-radius: 10px;
+        width: 140%;
+        height: auto;
+    }
+    article {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 3500px;
+        /* ここの高さを変更することでカラム数を */
+    }
+    section {
+        width: 21.5%;
+    }
+}
+
+.back-top {
+    box-shadow: 2px 2px 4px gray;
+    text-align: center;
+    background-color: #E3A936;
+}
+
+.back-top::before {
+    content: '⬆';
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 70px;
+}
+
+body {
+    font-family: serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.modal-header h1 {
+    margin: 1rem 0;
+}
+
+.modal-header {
+    background: #FFCC75;
+    padding: 3px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalClose {
+    font-size: 2rem;
+}
+
+.modalClose:hover {
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 10px 20px;
+    color: black;
+}
+
+.pricetar {
+    width: 10%;
+}
+
+
+/* 吹き出し */
+
+.balloon3-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 0 5px;
+    width: 80%;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    background: #ffcc75;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.balloon3-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #ffcc75;
+    z-index: 0;
+}
