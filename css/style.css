@@ -286,31 +286,107 @@
     .zentai {
         width: 100%;
         position: relative;
+        height: 100%;
     }
     .background {
-        width: 100%;
-    }
-    .cloud-top-right {
-        position: absolute;
-    }
-    .museum {
-        padding: 0;
         width: 100%;
         position: absolute;
         bottom: 0;
     }
-    .button {
-        width: 30%;
+    .cloud-top-right {
         position: absolute;
-        bottom: 3%;
+        width: 40%;
+        top: 0;
+        right: 0;
+        animation: top-right 2s infinite;
+        animation-delay: 0s;
+    }
+    @keyframes top-right {
+        0% {
+            transform: translateY(0)
+        }
+        50% {
+            transform: translateY(-10px)
+        }
+        100% {
+            transform: translateY(0)
+        }
+    }
+    .cloud-top-left {
+        position: absolute;
+        width: 50%;
+        top: 10%;
+        left: 0;
+        animation: top-right 3s infinite;
+        animation-delay: 0s;
+    }
+    .cloud-bottom-right {
+        position: absolute;
+        width: 30%;
+        top: 35%;
+        right: 12%;
+        animation: top-right 4s infinite;
+        animation-delay: 0s;
+    }
+    .cloud-bottom-left {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 0;
+        animation: top-right 5s infinite;
+        animation-delay: 0s;
+    }
+    .museum {
+        padding: 0;
+        width: 70%;
+        position: absolute;
+        bottom: 11%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+    }
+    .kanban {
+        /* opacity: 0; */
+        padding: 0;
+        width: 36%;
+        position: absolute;
+        bottom: 22.7%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        animation: kanban 2s infinite;
+    }
+    @keyframes kanban {
+        0% {
+            filter: brightness(1);
+        }
+        20% {
+            filter: brightness(1.2);
+        }
+        40% {
+            filter: brightness(1);
+        }
+        60% {
+            filter: brightness(1.2);
+        }
+        100% {
+            filter: brightness(1);
+        }
+    }
+    .button {
+        width: 20%;
+        position: absolute;
+        bottom: 2%;
         left: 50%;
         transform: translateX(-50%);
     }
     .pricetar {
         position: absolute;
         bottom: 10%;
-        left: 70%;
-        width: 10%;
+        left: 55%;
+        width: 8%;
     }
     .fukidashi {
         position: absolute;
@@ -331,17 +407,6 @@
         -o-transition: 0.1s ease-in-out;
         transition: 0.1s ease-in-out;
     }
-    .transition-animation {
-        transform: scale(3.0);
-    }
-    @keyframes fadeInAnime {
-        0% {
-            transform: scale(1.0);
-        }
-        100% {
-            transform: scale(1.5);
-        }
-    }
 }
 
 
@@ -360,6 +425,7 @@
         padding: 0;
         margin: 0;
         user-select: none;
+        overflow: hidden;
     }
     .zentai {
         width: 100%;
@@ -367,9 +433,14 @@
         position: relative;
     }
     .museum {
-        width: 100%;
+        padding: 0;
+        width: 140%;
         position: absolute;
-        bottom: 10%;
+        bottom: 11%;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
     }
     .button {
         width: 60%;
@@ -382,6 +453,34 @@
         width: 100%;
         position: absolute;
         bottom: 0;
+    }
+    .cloud-top-right {
+        width: 70%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .cloud-top-left {
+        width: 45%;
+        position: absolute;
+        top: 20%;
+        left: 0;
+    }
+    .cloud-bottom-right {
+        position: absolute;
+        width: 50%;
+        top: 35%;
+        right: 12%;
+        animation: top-right 4s infinite;
+        animation-delay: 0s;
+    }
+    .cloud-bottom-left {
+        position: absolute;
+        width: 60%;
+        top: 50%;
+        left: 0;
+        animation: top-right 5s infinite;
+        animation-delay: 0s;
     }
     .pricetar {
         position: absolute;
