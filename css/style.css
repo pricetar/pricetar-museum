@@ -24,7 +24,7 @@
 @keyframes moving {
     0% {
         top: 37vh;
-        left: -2vw;
+        left: -5vw;
     }
     25% {
         top: 41vh;
@@ -32,7 +32,7 @@
     }
     100% {
         top: 37vh;
-        left: 101vw;
+        left: 102vw;
     }
 }
 
