@@ -206,7 +206,7 @@ figure img:hover {
 
 @media screen and (min-width:768px) {
     article {
-        height: 2600px;
+        height: 1000px;
         /* ここの高さを変更することでカラム数を変更することが出来る */
     }
     section {
@@ -224,7 +224,7 @@ figure img:hover {
         height: auto;
     }
     article {
-        max-width: 1200px;
+        max-width: 1580px;
         margin: 0 auto;
         height: 3500px;
         /* ここの高さを変更することでカラム数を */
