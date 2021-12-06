@@ -19,15 +19,21 @@
     <!-- タイトル -->
     <p class="title">展示一覧</p>
 
-
-
     <article>
-
 
         <section>
             <figure>
-                <p id="modalOpen" class="button">
+                <p id="modalOpen" class="button" 　data-modal-open="modal-1">
                     <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFLtdRuaIAAOqMe?format=jpg&name=360x360" alt="">
+                </p>
+            </figure>
+            <h1 style="color: white;">◯◯さん</h1>
+        </section>
+
+        <section>
+            <figure>
+                <p id="modalOpen" class="button" 　data-modal-open="modal-1">
+                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFLsZAJagAAMRj0?format=jpg&name=360x360" alt="">
                 </p>
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
@@ -202,33 +208,25 @@
     </a>
 
     <!-- モーダル -->
-    <div id="easyModal" class="modal">
-
+    <div id="easyModal" class="modal" data-modal="modal-1">
         <div class="modal-content">
-
             <div class="modal-header">
                 ◯◯様の作品です。
                 <span class="modalClose">×</span>
             </div>
-
             <div class="modal-body">
                 <img style="width: 100%;" id="image">
-
                 <!-- プライスターくん -->
                 <img src="../test/images/プライスターくん素材12.png" class="pricetar">
                 <!-- プライスターくん -->
-
                 <div class="balloon3-left">
                     いつもプライスターをご利用いただきありがとうございます！！
                 </div>
-
             </div>
         </div>
     </div>
 
-
-
-    <script src="../testのコピー/js/list.js"></script>
+    <script src="../プライスターミュージアム/js/list.js"></script>
 </body>
 
 </html>
