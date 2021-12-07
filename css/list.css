@@ -111,16 +111,6 @@ body {
     font-feature-settings: "palt";
 }
 
-body,
-html {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    font-family: sans-serif;
-}
-
 header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -152,7 +142,7 @@ section {
 }
 
 section:last-of-type {
-    margin-bottom: 20px
+    margin-bottom: 50px
 }
 
 section h1 {
@@ -167,14 +157,14 @@ figure {
 }
 
 figure img:hover {
-    opacity: .7;
+    opacity: 0.7;
 }
 
 @media screen and (max-width:767px) {
     figure img {
         border-radius: 10px;
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 }
 
@@ -182,10 +172,6 @@ figure img:hover {
 /*幅768px以上に適用されるCSS（タブレットサイズ以上・幅990px以上にも適用される）*/
 
 @media screen and (min-width:768px) {
-    article {
-        height: 1000px;
-        /* ここの高さを変更することでカラム数を変更することが出来る */
-    }
     section {
         width: 28%;
     }
@@ -195,6 +181,23 @@ figure img:hover {
 /*幅990px以上に適用されるCSS（PCサイズ以上・幅768px以上のCSSが干渉する）*/
 
 @media screen and (min-width:990px) {
+    figure img {
+        border-radius: 10px;
+        width: 140%;
+        height: auto;
+    }
+    article {
+        max-width: 1500px;
+        margin: 0 auto;
+        height: 3400px;
+        /* ここの高さを変更することでカラム数を */
+    }
+    section {
+        width: 21.5%;
+    }
+}
+
+@media screen and (min-width:1400px) {
     figure img {
         border-radius: 10px;
         width: 140%;
@@ -263,14 +266,6 @@ figure img:hover {
     position: relative;
 }
 
-button {
-    padding: 10px;
-    background: #fff;
-    border: 1px solid #282828;
-    border-radius: 2px;
-    cursor: pointer;
-}
-
 .modalArea {
     display: none;
     position: fixed;
@@ -293,8 +288,8 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 500px;
-    height: 315px;
+    max-width: 700px;
+    height: 60%;
     padding: 10px 30px;
     background: #fff;
 }
@@ -309,4 +304,14 @@ button {
 
 .is-open {
     display: block;
+    animation: fadeDownAnime 0.5s ease;
+}
+
+@keyframes fadeDownAnime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
