@@ -1,6 +1,7 @@
 'use strict';
 
 {
+    // モーダルに関する処理
     $(function() {
         $('.openModal').click(function(e) { //openModalをクリックした時に
             var btnIndex = e.currentTarget.accessKey;　 // imgに指定したaccesskeyを参照
@@ -19,5 +20,26 @@
             //追加したoverflow:hidden;を削除
         });
 
+    });
+}
+
+{
+    // トップに戻るボタンの処理
+    $(function() {
+        var pagetop = $('#js-pagetop');
+        pagetop.hide();
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                pagetop.fadeIn();
+            } else {
+                pagetop.fadeOut();
+            }
+        });
+        pagetop.click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 500);
+            return false;
+        });
     });
 }
