@@ -1,26 +1,23 @@
 'use strict';
 
 {
-
-    // const image = document.getElementsByClassName('img');
-
-    // image.addEventListener('click', (e) => {
-
-    const modalWrapOpen = function(e) {
-            console.log(e);
-            let modalTarget = this.data('modal-link');
-            let modal = document.querySelector('.' + modalTarget);
-            modal.toggleClass('is-show');
-        }
-        // });
-
-
-    //クリックイベントの定義：複数なのでforEachでイテレートさせる
-    //works_modal_open classが付与された要素を全て取得
-    //全ての要素に対してクリックイベントを定義する
-    Array.from(document.querySelectorAll('img')).forEach((modalOpenElement) => {
-        modalOpenElement.addEventListener('click', function(e) {
-            modalWrapOpen(e);
+    $(function() {
+        $('.openModal').click(function(e) { //openModalをクリックした時に
+            var btnIndex = e.currentTarget.accessKey;　 // imgに指定したaccesskeyを参照
+            console.log(e.currentTarget.accessKey); // デバッグ
+            $('.modalArea').eq(btnIndex - 1).addClass('is-open');
+            //クリックしたモーダルボタンと同じ番目のモーダルを表示する。addClassでis-openクラスを追加して表示する
+            　　　　
+            // $('html, body').css('overflow', 'hidden');
+            // overflow:hidden;の追加で背景のスクロール禁止に
         });
-    })
+        $('.closeModal, .modalBg').click(function() { //closeModalかmodalBgをクリックした時に
+            $('.modalArea').removeClass('is-open');
+            //モーダルを非表示にする。removeClassでis-openクラスを削除して非表示にする
+            　　　　
+            // $('html, body').removeAttr('style');
+            //追加したoverflow:hidden;を削除
+        });
+
+    });
 }

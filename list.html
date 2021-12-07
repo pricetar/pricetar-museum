@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <title>プライスターミュージアム | 展示一覧</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="../プライスターミュージアム/css/list.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,187 +18,492 @@
     </div>
     <!-- タイトル -->
     <p class="title">展示一覧</p>
-
+    <!-- 展示一覧 -->
     <article>
 
-        <section>
-            <figure>
-                <p id="modalOpen" class="button" 　data-modal-open="modal-1">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFLtdRuaIAAOqMe?format=jpg&name=360x360" alt="">
-                </p>
-            </figure>
-            <h1 style="color: white;">◯◯さん</h1>
-        </section>
 
+        <!-- 展示① -->
         <section>
             <figure>
-                <p id="modalOpen" class="button" 　data-modal-open="modal-1">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFLsZAJagAAMRj0?format=jpg&name=360x360" alt="">
-                </p>
+                <img class="openModal" accesskey='1' style="box-shadow: 2px 2px 4px gray;" src="https://ucf10ed7b53c073382b2a792b012.previews.dropboxusercontent.com/p/thumb/ABUrR-KXszpdeh5r6No1XwVQbSRXzcCdJP-eQ4d4jFhV_lmSxV0qBYy0sWLzlCNmKL45aYBTf7w4hOSp4u-7RjdttFcCjh8ipGnCRHCLYxC43gZSVIIFmV_54yEALZpDzc-VKvEzXZTDJ25gEpJ4lGwkIMdAzwVfYAZ6lBTpP3ikjiDeAyqmJ_27XEPBn6wNxxyJa4Won04WPmRLZ6W7aiqyezclnWIFN9EzyB50nHa3TlfC3J3U__K8e9JXKNXtVnbsyQ_2ifoCyFBc8lF2crmGPFOXeuqbTqGanflm90Zo6lmixfOA9oTus5CwEJhvZhQv2-jLSFgLbCLRGc5lSbNfdgZLAm7TVhnY3e8cC7d5ZRcgypwGVuVMiWrTSfWv2-A/p.png"
+                    alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
-
+        <!-- モーダル① -->
+        <div class="modalArea">
+            <!-- class名をmodalAreaで統一 -->
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        <!-- 展示② -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" class="image1" src="https://pbs.twimg.com/media/FFLsZAJagAAMRj0?format=jpg&name=360x360" alt="">
-                </a>
+                <img class="openModal" accesskey='2' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFLsZAJagAAMRj0?format=jpg&name=360x360" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル② -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents2</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        <!-- 展示③ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFBstzNaQAAkmUc?format=jpg&name=240x240" alt="">
-                </a>
+                <img class="openModal" accesskey='3' style="box-shadow: 2px 2px 4px gray;" class="image1" src="https://pbs.twimg.com/media/FFLsZAJagAAMRj0?format=jpg&name=360x360" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル③ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!3</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示④ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FE9LXbGagAAbWIJ?format=jpg&name=360x360" alt="">
-                </a>
+                <img class="openModal" accesskey='4' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FFBstzNaQAAkmUc?format=jpg&name=240x240" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル④ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!4</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑤ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FEYFOthakAAa8mr?format=jpg&name=240x240" alt="">
-                </a>
+                <img class="openModal" accesskey='5' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FE9LXbGagAAbWIJ?format=jpg&name=360x360" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑤ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!5</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑥ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FESjeZVacAIndOp?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='6' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FEYFOthakAAa8mr?format=jpg&name=240x240" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑥ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!6</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑦ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FEEfpAuaIAE4Gl0?format=jpg&name=240x240" alt="">
-                </a>
+                <img class="openModal" accesskey='7' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FESjeZVacAIndOp?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑦ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!7</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑧ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FD_hsYoagAE5zp8?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='8' 　style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FEEfpAuaIAE4Gl0?format=jpg&name=240x240" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑧ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!8</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑨ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FD_hil7aAAAQlZT?format=jpg&name=medium" alt="">
-                </a>
+                <img class="openModal" accesskey='9' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FD_hsYoagAE5zp8?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑨ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!9</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑩ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FD_KUAVaAAMug1b?format=jpg&name=medium" alt="">
-                </a>
+                <img class="openModal" accesskey='10' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FD_hil7aAAAQlZT?format=jpg&name=medium" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑩ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!10</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑪ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDQPOuBaMAAk-_n?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='11' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FD_KUAVaAAMug1b?format=jpg&name=medium" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑪ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!11</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑫ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDQKQREaAAAVv_L?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='12' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDQPOuBaMAAk-_n?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑫ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!12</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑬ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDPFW8FakAAHlT5?format=jpg&name=240x240" alt="">
-                </a>
+                <img class="openModal" accesskey='13' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDQKQREaAAAVv_L?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑬ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!13</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑭ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDLlKZsagAIpsHo?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='14' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDPFW8FakAAHlT5?format=jpg&name=240x240" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑭ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!14</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑮ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDLklCRaUAA4oYm?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='15' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDLlKZsagAIpsHo?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑮ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!15</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑯ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDLiup-aIAAE_S0?format=jpg&name=medium" alt="">
-                </a>
+                <img class="openModal" accesskey='16' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDLklCRaUAA4oYm?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑯ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!16</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑰ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDKTDjoacAAki8f?format=jpg&name=large" alt="">
-                </a>
+                <img class="openModal" accesskey='17' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDLiup-aIAAE_S0?format=jpg&name=medium" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑰ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!17</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑱ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDKTDj9aAAEX2aH?format=jpg&name=large" alt="">
-                </a>
+                <img class="openModal" accesskey='18' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDKTDjoacAAki8f?format=jpg&name=large" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑱ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!18</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑲ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDAr3toakAElgaV?format=jpg&name=small" alt="">
-                </a>
+                <img class="openModal" accesskey='19' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDKTDj9aAAEX2aH?format=jpg&name=large" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑲ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!19</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示⑳ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDAoNu3aMAA62uu?format=jpg&name=medium" alt="">
-                </a>
+                <img class="openModal" accesskey='20' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDAr3toakAElgaV?format=jpg&name=small" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル⑳ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!20</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示㉑ -->
         <section>
             <figure>
-                <a href="#">
-                    <img style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FC2c8w2aQAANeMQ?format=jpg&name=medium" alt="">
-                </a>
+                <img class="openModal" accesskey='21' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FDAoNu3aMAA62uu?format=jpg&name=medium" alt="">
             </figure>
             <h1 style="color: white;">◯◯さん</h1>
         </section>
+        <!-- モーダル㉑ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!21</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- 展示㉒ -->
+        <section>
+            <figure>
+                <img class="openModal" accesskey='22' style="box-shadow: 2px 2px 4px gray;" src="https://pbs.twimg.com/media/FC2c8w2aQAANeMQ?format=jpg&name=medium" alt="">
+            </figure>
+            <h1 style="color: white;">◯◯さん</h1>
+        </section>
+        <!-- モーダル㉒ -->
+        <div class="modalArea">
+            <div class="modalBg"></div>
+            <!-- モーダルの背景-->
+            <div class="modalWrapper">
+                <!-- モーダルの中身 -->
+                <div class="modalContents">
+                    <h1>modal contents!22</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="closeModal">×</div>
+            </div>
+        </div>
+        </div>
+        </div>
 
     </article>
 
@@ -207,26 +512,8 @@
         <div style="position: fixed; bottom: 3%; right: 3%; width: 70px; height: 70px; border-radius: 50%;" class="back-top"></div>
     </a>
 
-    <!-- モーダル -->
-    <div id="easyModal" class="modal" data-modal="modal-1">
-        <div class="modal-content">
-            <div class="modal-header">
-                ◯◯様の作品です。
-                <span class="modalClose">×</span>
-            </div>
-            <div class="modal-body">
-                <img style="width: 100%;" id="image">
-                <!-- プライスターくん -->
-                <img src="../test/images/プライスターくん素材12.png" class="pricetar">
-                <!-- プライスターくん -->
-                <div class="balloon3-left">
-                    いつもプライスターをご利用いただきありがとうございます！！
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="../プライスターミュージアム/js/list.js"></script>
+    <script src="../プライスターミュージアム/js/list-fix.js"></script>
 </body>
 
 </html>
