@@ -3,9 +3,15 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
     user-select: none;
     background-color: tan;
+    font-family: sans-serif;
 }
+
+
+/* ヘッダーのカーテンについて */
 
 .header-image {
     position: relative;
@@ -20,98 +26,14 @@ body {
     /* 1:1 */
 }
 
-.back-button {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    color: white;
-    z-index: 2;
-}
-
-.back-button-image {
-    transform: rotate(90deg);
-    width: 20%;
-}
-
-#back-btn:hover {
-    animation: rotate-anime 0.3s ease-in-out;
-}
-
-@keyframes rotate-anime {
-    0% {
-        transform: rotate(90);
-    }
-    100% {
-        transform: rotate(450deg);
-    }
-}
-
 
 /* グリッドレイアウトについて */
-
-.item {
-    background: #ddd;
-    padding: 10px;
-    border-radius: 20px;
-    border: 3px solid #ccc;
-}
-
-.container {
-    display: grid;
-    gap: 10px;
-}
-
-.container {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-    grid-template-rows: 180px 100px 80px 120px auto auto;
-    /* grid-template-columns × grid-template-rowsで配置できる要素数をカウントできる */
-}
-
-.box-big1 {
-    grid-row: 1 / 4;
-    width: 300px;
-}
-
-.box-big3 {
-    grid-row: 3 / 5;
-}
-
-
-/* グリッドのレスポンシブ対応  */
-
-@media (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    .box-big1,
-    .box-big2,
-    .box-big3,
-    .box-big4 {
-        grid-column: 1;
-        grid-row: auto;
-    }
-}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-feature-settings: "palt";
-}
-
-header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-    padding-left: 20px;
-    background-color: black;
-}
-
-header h2 {
-    font-weight: normal;
 }
 
 footer {
@@ -133,7 +55,7 @@ section {
 }
 
 section:last-of-type {
-    margin-bottom: 50px
+    margin-bottom: 20px
 }
 
 section h1 {
@@ -142,58 +64,13 @@ section h1 {
 }
 
 figure {
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: tan;
     line-height: 0;
 }
 
 figure img:hover {
-    opacity: 0.7;
-}
-
-.back-top {
-    box-shadow: 2px 2px 4px gray;
-    text-align: center;
-    background-color: #E3A936;
-}
-
-.back-top::before {
-    content: '⬆';
-    color: white;
-    width: 100%;
-    margin: 0 auto;
-    line-height: 70px;
-}
-
-
-/* 吹き出し */
-
-.balloon3-left {
-    position: relative;
-    display: inline-block;
-    margin: 1.5em 0 1.5em 15px;
-    padding: 0 5px;
-    width: 80%;
-    height: 90px;
-    line-height: 90px;
-    text-align: center;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: bold;
-    background: #ffcc75;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.balloon3-left:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -25px;
-    margin-top: -15px;
-    border: 15px solid transparent;
-    border-right: 15px solid #ffcc75;
-    z-index: 0;
+    opacity: .7;
 }
 
 
@@ -210,13 +87,23 @@ figure img:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
 }
 
 .modalBg {
     width: 100%;
     height: 100%;
     background: rgba(30, 30, 30, 0.9);
+}
+
+.modalContents {
+    width: 100%;
+    height: 110%;
+}
+
+.modalImage {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .modalWrapper {
@@ -256,18 +143,6 @@ figure img:hover {
 
 /* トップに戻るボタンの処理 */
 
-#js-pagetop {
-    position: fixed;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: #f99900;
-    color: #fff;
-    bottom: 50px;
-    right: 50px;
-    cursor: pointer;
-}
-
 #js-pagetop span {
     position: absolute;
     top: 50%;
@@ -279,19 +154,14 @@ figure img:hover {
     font-size: 14px;
 }
 
-@media screen and (max-width:767px) {
-    .title {
-        text-align: center;
-        font-weight: bold;
-        color: white;
-        font-size: 7vw;
-        margin-bottom: 50px;
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-    }
+
+/* 480px以下に適用されるCSS（スマホ用） */
+
+@media screen and (max-width: 480px) {
     figure img {
         border-radius: 10px;
         width: 100%;
-        height: 100%;
+        height: 250px;
     }
     #js-pagetop {
         position: fixed;
@@ -300,9 +170,17 @@ figure img:hover {
         border-radius: 50%;
         background: #f99900;
         color: #fff;
-        bottom: 20px;
-        right: 20px;
+        bottom: 30px;
+        right: 30px;
         cursor: pointer;
+    }
+    .title {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 7vw;
+        margin-bottom: 50px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
     }
 }
 
@@ -310,6 +188,46 @@ figure img:hover {
 /*幅768px以上に適用されるCSS（タブレットサイズ以上・幅990px以上にも適用される）*/
 
 @media screen and (min-width:768px) {
+    article {
+        height: 2600px;
+    }
+    section {
+        width: 28%;
+    }
+}
+
+
+/*幅990px以上に適用されるCSS（PCサイズ以上・幅768px以上のCSSが干渉する）*/
+
+@media screen and (min-width:990px) {
+    article {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 2700px;
+    }
+    section {
+        width: 21.5%;
+    }
+    figure img {
+        border-radius: 10px;
+        width: 130%;
+        height: auto;
+    }
+    .smartphone {
+        display: none;
+    }
+    /* トップに戻るボタンの処理 */
+    #js-pagetop {
+        position: fixed;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #f99900;
+        color: #fff;
+        bottom: 50px;
+        right: 50px;
+        cursor: pointer;
+    }
     .title {
         text-align: center;
         font-weight: bold;
@@ -318,71 +236,7 @@ figure img:hover {
         margin-bottom: 50px;
         font-family: 'M PLUS Rounded 1c', sans-serif;
     }
-    figure img {
-        border-radius: 10px;
-        width: 140%;
-        height: auto;
-    }
-    article {
-        max-width: 1500px;
-        margin: 0 auto;
-        height: 3400px;
-        /* ここの高さを変更することでカラム数を */
-    }
-    section {
-        width: 21.5%;
-    }
 }
 
 
-/*幅990px以上に適用されるCSS（PCサイズ以上・幅768px以上のCSSが干渉する）*/
-
-@media screen and (min-width:990px) {
-    .title {
-        text-align: center;
-        font-weight: bold;
-        color: white;
-        font-size: 3vw;
-        margin-bottom: 50px;
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-    }
-    figure img {
-        border-radius: 10px;
-        width: 140%;
-        height: auto;
-    }
-    article {
-        max-width: 1500px;
-        margin: 0 auto;
-        height: 3400px;
-        /* ここの高さを変更することでカラム数を */
-    }
-    section {
-        width: 21.5%;
-    }
-}
-
-@media screen and (min-width:1400px) {
-    .title {
-        text-align: center;
-        font-weight: bold;
-        color: white;
-        font-size: 3vw;
-        margin-bottom: 50px;
-        font-family: 'M PLUS Rounded 1c', sans-serif;
-    }
-    figure img {
-        border-radius: 10px;
-        width: 140%;
-        height: auto;
-    }
-    article {
-        max-width: 1500px;
-        margin: 0 auto;
-        height: 3500px;
-        /* ここの高さを変更することでカラム数を */
-    }
-    section {
-        width: 21.5%;
-    }
-}
+/* レスポンシブ1105pxまで対応 */
