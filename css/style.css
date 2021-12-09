@@ -502,3 +502,53 @@
         transition: 0.1s ease-in-out;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .cloud-top-right {
+        position: absolute;
+        width: 60%;
+        top: 10%;
+        right: 0;
+        animation: top-right 2s infinite;
+        animation-delay: 0s;
+    }
+    .cloud-top-left {
+        position: absolute;
+        width: 60%;
+        top: 20%;
+        left: 0;
+        animation: top-right 3s infinite;
+        animation-delay: 0s;
+    }
+    .cloud-bottom-right {
+        position: absolute;
+        width: 50%;
+        top: 40%;
+        right: 12%;
+        animation: top-right 4s infinite;
+        animation-delay: 0s;
+    }
+    .cloud-bottom-left {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 0;
+        animation: top-right 5s infinite;
+        animation-delay: 0s;
+    }
+    @keyframes top-right {
+        0% {
+            transform: translateY(0)
+        }
+        50% {
+            transform: translateY(-10px)
+        }
+        100% {
+            transform: translateY(0)
+        }
+    }
+}
+
+.opa1 {
+    display: none;
+}
