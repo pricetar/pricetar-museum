@@ -9,8 +9,8 @@ const remove1 = () => {
     bird2.classList.remove('opa1');
 }
 const remove2 = () => {
-        bird3.classList.remove('opa1');
-    }
-    //1,000ミリ秒後にcountUp関数を呼び出す処理を追加
-setTimeout(remove1, 2000);
-setTimeout(remove2, 3000);
+    bird3.classList.remove('opa1');
+}
+
+setTimeout(remove1, 1500);
+setTimeout(remove2, 3500);
