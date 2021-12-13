@@ -192,6 +192,79 @@ figure img:hover {
     }
 }
 
+
+/* タブレット（小）サイズ */
+
+@media screen and (min-width:481px) {
+    figure img {
+        border-radius: 10px;
+        width: 100%;
+        height: 350px;
+    }
+    .title {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 5vw;
+        margin-bottom: 50px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+}
+
+
+/* タブレット（大）サイズ */
+
+@media screen and (min-width:700px) {
+    figure img {
+        border-radius: 10px;
+        width: 100%;
+        height: 450px;
+    }
+    .title {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 5vw;
+        margin-bottom: 50px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+}
+
+
+/*スマホサイズ*/
+
+@media screen and (max-width: 480px) {
+    figure img {
+        border-radius: 10px;
+        width: 100%;
+        height: 250px;
+    }
+    #js-pagetop {
+        position: fixed;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #f99900;
+        color: #fff;
+        bottom: 30px;
+        right: 30px;
+        cursor: pointer;
+    }
+    .title {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        font-size: 7vw;
+        margin-bottom: 50px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+    }
+    .modalImage {
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
 @media screen and (min-width:650px) {
     .modalImage {
         width: 100%;
@@ -201,7 +274,7 @@ figure img:hover {
 }
 
 
-/*幅990px以上に適用されるCSS（PCサイズ以上・幅768px以上のCSSが干渉する）*/
+/*PCサイズ*/
 
 @media screen and (min-width:990px) {
     article {
