@@ -282,6 +282,7 @@
         padding: 0;
         margin: 0;
         user-select: none;
+        animation: fadeIn 2s;
     }
     .zentai {
         width: 100%;
@@ -426,6 +427,7 @@
         margin: 0;
         user-select: none;
         overflow: hidden;
+        animation: fadeIn 2s;
     }
     .zentai {
         width: 100%;
@@ -547,8 +549,30 @@
             transform: translateY(0)
         }
     }
+    .bird {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        animation: moving 12s linear infinite;
+    }
 }
+
+
+/* 鳥2と鳥3に画面ロード時に適用（◯◯秒経過後にこのクラスを削除する） */
 
 .opa1 {
     opacity: 0;
+}
+
+
+/* フェードインのアニメーション */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
