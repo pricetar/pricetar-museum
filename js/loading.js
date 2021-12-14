@@ -1,13 +1,13 @@
 'use strict';
 
 {
-    const tm = 2500; // ここでLoadingの時間を変更する
+    const tm = 2500;
 
-    window.onload = function() { // 画面を開いた瞬間に発火させる関数
-        setTimeout(fn, tm); // setTimeoutで時間を指定し、指定した時間が経ったらfn関数を実行する。
+    window.onload = function() {
+        setTimeout(fn, tm);
     }
 
-    function fn() { // 画面遷移させる関数
+    function fn() {
         window.location.href = 'list.html';
     }
 }

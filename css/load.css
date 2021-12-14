@@ -25,7 +25,6 @@ body {
             transform: rotate(-5deg);
         }
     }
-    /* ロードの丸 */
     .block {
         width: 40px;
         margin: 0 auto;
